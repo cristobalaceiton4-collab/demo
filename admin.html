@@ -1,0 +1,50 @@
+<!-- public/admin.html -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin - Pastelería</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+<h1>Panel Admin</h1>
+<div class="login-area" id="loginArea">
+<form id="loginForm">
+<input name="username" placeholder="usuario" required>
+<input name="password" type="password" placeholder="contraseña" required>
+<button type="submit">Entrar</button>
+</form>
+</div>
+<div id="adminControls" style="display:none;">
+<button id="logoutBtn">Cerrar sesión</button>
+</div>
+</header>
+
+
+<main>
+<div id="adminPanel" style="display:none;">
+<h2>Crear categoría</h2>
+<form id="catForm"><input name="name" placeholder="Nombre categoría" required><button>Crear</button></form>
+
+
+<h2>Crear producto</h2>
+<form id="prodForm">
+<input name="name" placeholder="Nombre" required>
+<input name="price" placeholder="Precio" required>
+<select name="category_id" id="categorySelect"></select>
+<textarea name="description" placeholder="Descripción"></textarea>
+<button>Crear producto</button>
+</form>
+
+
+<h2>Productos existentes</h2>
+<div id="productList"></div>
+</div>
+</main>
+
+
+<script src="/main.js"></script>
+</body>
+</html>
